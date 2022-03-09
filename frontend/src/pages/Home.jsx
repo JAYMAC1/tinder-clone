@@ -5,7 +5,7 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 
 const Home = () => {
-  const authToken = true
+  const authToken = false
   const handleClick = () => {
     console.log('clicked')
   }
