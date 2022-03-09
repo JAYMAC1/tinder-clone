@@ -1,7 +1,25 @@
+// react related packages
 import React from 'react'
 
+// Custom components and pages
+import Navbar from '../components/Navbar'
+
 const Home = () => {
-  return <div>Home</div>
+  const authToken = true
+  const handleClick = () => {
+    console.log('clicked')
+  }
+  return (
+    <>
+      <Navbar />
+      <div className='home'>
+        <h1>Swipe Right&#174;</h1>
+        <button onClick={handleClick} className='primary-button'>
+          {authToken ? 'Signout' : 'Create Account'}
+        </button>
+      </div>
+    </>
+  )
 }
 
 export default Home
