@@ -7,7 +7,17 @@ import Dashboard from './pages/Dashboard'
 import Onboarding from './pages/Onboarding'
 
 const App = () => {
-  return <div>App</div>
+  return (
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/dashboard' element={<Dashboard />} />
+          <Route path='/onboarding' element={<Onboarding />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
+  )
 }
 
 export default App
