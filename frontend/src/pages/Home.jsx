@@ -10,7 +10,7 @@ const Home = () => {
     console.log('clicked')
   }
   return (
-    <>
+    <div className='overlay'>
       <Navbar minimal={false} authToken={authToken} />
       <div className='home'>
         <h1>Swipe Right&#174;</h1>
@@ -18,7 +18,7 @@ const Home = () => {
           {authToken ? 'Signout' : 'Create Account'}
         </button>
       </div>
-    </>
+    </div>
   )
 }
 
