@@ -1,13 +1,15 @@
 // react related packages
-import React from 'react'
+import React, { useState } from 'react'
 
 // Custom components and pages
 import Navbar from '../components/Navbar'
 
 const Home = () => {
+  const [showModal, setShowModal] = useState(false)
   const authToken = false
   const handleClick = () => {
     console.log('clicked')
+    setShowModal(true)
   }
   return (
     <div className='overlay'>
