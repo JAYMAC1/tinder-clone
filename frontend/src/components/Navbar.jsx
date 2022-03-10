@@ -4,7 +4,7 @@ import React from 'react'
 import whiteLogo from '../images/white-tinder-logo.png'
 import colourLogo from '../images/colour-tinder-logo.png'
 
-const Navbar = ({ minimal, authToken }) => {
+const Navbar = ({ minimal, authToken, setShowModal, showModal }) => {
   return (
     <nav>
       <div className='logo-container'>
@@ -14,7 +14,14 @@ const Navbar = ({ minimal, authToken }) => {
           alt='logo'
         />
       </div>
-      {!authToken && !minimal && <button className='nav-button'>Log in</button>}
+      {!authToken && !minimal && (
+        <button
+          onClick={() => setShowModal(true)}
+          className='nav-button'
+          disabled={showModal}>
+          Log in
+        </button>
+      )}
     </nav>
   )
 }
