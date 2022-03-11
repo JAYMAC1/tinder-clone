@@ -26,7 +26,7 @@ const Home = () => {
           {authToken ? 'Signout' : 'Create Account'}
         </button>
 
-        {showModal && <AuthModal setShowModal={setShowModal} />}
+        {showModal && <AuthModal isSignUp={true} setShowModal={setShowModal} />}
       </div>
     </div>
   )

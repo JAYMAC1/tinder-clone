@@ -18,7 +18,8 @@ const Navbar = ({ minimal, authToken, setShowModal, showModal }) => {
         <button
           onClick={() => setShowModal(true)}
           className='nav-button'
-          disabled={showModal}>
+          disabled={showModal}
+          isSignUp={false}>
           Log in
         </button>
       )}

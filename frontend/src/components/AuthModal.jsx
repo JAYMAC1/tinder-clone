@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const AuthModal = ({ setShowModal }) => {
+const AuthModal = ({ setShowModal, isSignUp }) => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
@@ -12,7 +12,6 @@ const AuthModal = ({ setShowModal }) => {
   const handleSubmit = (e) => {
     e.preventDefault()
   }
-  const isSignUp = true
 
   return (
     <div className='auth-modal'>
@@ -56,6 +55,8 @@ const AuthModal = ({ setShowModal }) => {
         <input className='secondary-button' type='submit' value='Submit' />
         <p>{error}</p>
       </form>
+      <hr />
+      <h2>GET THE APP</h2>
     </div>
   )
 }
